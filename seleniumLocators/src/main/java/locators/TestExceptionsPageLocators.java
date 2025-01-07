@@ -1,5 +1,6 @@
 package locators;
 
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -51,10 +52,22 @@ public class TestExceptionsPageLocators {
 			WebElement inputFieldByCSS = driver.findElement(By.cssSelector("input[class='input-field']"));
 		
 		// Create a list of WebElements for all buttons using tag
+			List<WebElement> buttonsByTag = driver.findElements(By.tagName("button"));
 			
-		
 		// Identify both buttons, using ID, name, CSS, XPath for each
-		
+			// Edit button
+			WebElement editButtonByID = driver.findElement(By.id("edit_btn"));
+			WebElement editButtonByName = driver.findElement(By.name("Edit"));
+			WebElement editButtonByCSS = driver.findElement(By.cssSelector("button[id='edit_btn']"));
+			WebElement editButtonByXPath = driver.findElement(By.xpath("//button[@id='edit_btn']"));
+			
+			// Add button <button id="add_btn" class="btn" name="Add" style="">Add</button>
+			WebElement addButtonByID = driver.findElement(By.id("add_btn"));
+			WebElement addButtonByName = driver.findElement(By.name("Add"));
+			WebElement addButtonByCSS = driver.findElement(By.cssSelector("button[id='add_btn']"));
+			WebElement addButtonByXPath = driver.findElement(By.xpath("//button[@id='add_btn']"));
+			
+		driver.quit();
 		
 	}
 	
