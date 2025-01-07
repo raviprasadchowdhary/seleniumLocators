@@ -40,13 +40,18 @@ public class TestExceptionsPageLocators {
 				}
 			}
 			System.out.println(driver.getTitle());
-			// swithc back to main window handle
+			// switch back to main window handle
 			driver.switchTo().window(mainWindowhandle);
 			Thread.sleep(500);
 			
-		// Find WebElements for the input field using tag, class, name, XPath and CSS
+		// Find WebElements for the input field using tag, class name, XPath and CSS
+			WebElement inputFieldByTag = driver.findElement(By.tagName("input"));
+			WebElement inputFieldByClass = driver.findElement(By.className("input-field"));
+			WebElement inputFieldByXPath = driver.findElement(By.xpath("//input[@class='input-field']"));
+			WebElement inputFieldByCSS = driver.findElement(By.cssSelector("input[class='input-field']"));
 		
 		// Create a list of WebElements for all buttons using tag
+			
 		
 		// Identify both buttons, using ID, name, CSS, XPath for each
 		
