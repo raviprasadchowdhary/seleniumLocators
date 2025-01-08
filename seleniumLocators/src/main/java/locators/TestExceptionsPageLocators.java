@@ -67,6 +67,7 @@ public class TestExceptionsPageLocators {
 			WebElement addButtonByCSS = driver.findElement(By.cssSelector("button[id='add_btn']"));
 			WebElement addButtonByXPath = driver.findElement(By.xpath("//button[@id='add_btn']"));
 			
+			
 		driver.quit();
 	}
 	
